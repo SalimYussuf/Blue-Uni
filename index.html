@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socotra University</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" onclick="showPage('home')">
+                <div class="logo-crest">S</div>
+                <span>Socotra University</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
+                <li><a href="#" onclick="showPage('programs')" id="nav-programs">Programs</a></li>
+                <li><a href="#" onclick="showPage('events')" id="nav-events">Events</a></li>
+                <li><a href="#" onclick="showPage('apply')" id="nav-apply" class="nav-cta">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =================== HOME PAGE =================== -->
+    <div id="home-page" class="page active">
+        <!-- Hero -->
+        <div class="hero">
+            <div class="hero-badge">Est. 1892 · Excellence in Education</div>
+            <h1>Shape the <em>Future</em><br>Through Knowledge</h1>
+            <p>Socotra University offers world-class education across 12 faculties, preparing graduates who lead,
+                innovate, and inspire globally.</p>
+            <div class="hero-actions">
+                <button class="btn-primary" onclick="showPage('programs')">Explore Programs</button>
+                <button class="btn-outline" onclick="showPage('apply')">Apply for 2025/2026</button>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="num">24,000+</div>
+                    <div class="label">Students enrolled</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">98%</div>
+                    <div class="label">Graduate employment</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">180+</div>
+                    <div class="label">Programs offered</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">Top 50</div>
+                    <div class="label">Africa ranking</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- News -->
+        <section style="background: var(--white);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Latest News</div>
+                    <h2>From the University</h2>
+                    <p>Stay informed with announcements, research breakthroughs, and institutional news.</p>
+                </div>
+                <div class="news-grid">
+                    <div class="news-card featured">
+                        <div class="news-card-img"
+                            style="background: linear-gradient(135deg, #0d1f3c 0%, #1a3258 100%); font-size: 64px; height: 280px;">
+                            🔬</div>
+                        <div class="news-card-body">
+                            <span class="news-tag">Research</span>
+                            <h3>Socotra Scientists Develop Low-Cost Water Purification Technology for Rural Communities
+                            </h3>
+                            <p>A breakthrough by the Faculty of Engineering, in partnership with three NGOs, promises
+                                clean water access to over 200,000 people across the region by 2026.</p>
+                            <div class="news-meta">
+                                <span>March 20, 2025</span>
+                                <span>Faculty of Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-card-img"
+                            style="background: linear-gradient(135deg, #1a4a2a 0%, #2d6e42 100%);">🏆</div>
+                        <div class="news-card-body">
+                            <span class="news-tag">Achievement</span>
+                            <h3>Law Faculty Team Wins East Africa Moot Court Championship</h3>
+                            <p>For the third consecutive year, Socotra's team claimed top honors in Kampala.</p>
+                            <div class="news-meta"><span>March 15, 2025</span></div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-card-img"
+                            style="background: linear-gradient(135deg, #4a2a00 0%, #7a4800 100%);">📅</div>
+                        <div class="news-card-body">
+                            <span class="news-tag">Admissions</span>
+                            <h3>2025/2026 Applications Now Open — Deadline July 31</h3>
+                            <p>Apply early to qualify for merit-based scholarships covering up to 50% of tuition fees.
+                            </p>
+                            <div class="news-meta"><span>March 1, 2025</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Highlight -->
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Academics</div>
+                    <h2>Find Your Path</h2>
+                    <p>Discover programs that align with your ambition and career goals.</p>
+                </div>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px;">
+                    <div onclick="showPage('programs')"
+                        style="background: var(--white); border: 1.5px solid var(--gray-100); border-radius: var(--radius-lg); padding: 24px; text-align: center; cursor: pointer; transition: all 0.2s;"
+                        onmouseover="this.style.borderColor='#c9a84c'" onmouseout="this.style.borderColor='#eceae3'">
+                        <div style="font-size: 36px; margin-bottom: 12px;">⚕️</div>
+                        <div
+                            style="font-family: var(--font-serif); font-size: 16px; font-weight: 600; color: var(--navy);">
+                            Medicine & Health</div>
+                        <div style="font-size: 13px; color: var(--gray-500); margin-top: 4px;">24 programs</div>
+                    </div>
+                    <div onclick="showPage('programs')"
+                        style="background: var(--white); border: 1.5px solid var(--gray-100); border-radius: var(--radius-lg); padding: 24px; text-align: center; cursor: pointer; transition: all 0.2s;"
+                        onmouseover="this.style.borderColor='#c9a84c'" onmouseout="this.style.borderColor='#eceae3'">
+                        <div style="font-size: 36px; margin-bottom: 12px;">⚙️</div>
+                        <div
+                            style="font-family: var(--font-serif); font-size: 16px; font-weight: 600; color: var(--navy);">
+                            Engineering</div>
+                        <div style="font-size: 13px; color: var(--gray-500); margin-top: 4px;">18 programs</div>
+                    </div>
+                    <div onclick="showPage('programs')"
+                        style="background: var(--white); border: 1.5px solid var(--gray-100); border-radius: var(--radius-lg); padding: 24px; text-align: center; cursor: pointer; transition: all 0.2s;"
+                        onmouseover="this.style.borderColor='#c9a84c'" onmouseout="this.style.borderColor='#eceae3'">
+                        <div style="font-size: 36px; margin-bottom: 12px;">💼</div>
+                        <div
+                            style="font-family: var(--font-serif); font-size: 16px; font-weight: 600; color: var(--navy);">
+                            Business</div>
+                        <div style="font-size: 13px; color: var(--gray-500); margin-top: 4px;">20 programs</div>
+                    </div>
+                    <div onclick="showPage('programs')"
+                        style="background: var(--white); border: 1.5px solid var(--gray-100); border-radius: var(--radius-lg); padding: 24px; text-align: center; cursor: pointer; transition: all 0.2s;"
+                        onmouseover="this.style.borderColor='#c9a84c'" onmouseout="this.style.borderColor='#eceae3'">
+                        <div style="font-size: 36px; margin-bottom: 12px;">⚖️</div>
+                        <div
+                            style="font-family: var(--font-serif); font-size: 16px; font-weight: 600; color: var(--navy);">
+                            Law</div>
+                        <div style="font-size: 13px; color: var(--gray-500); margin-top: 4px;">8 programs</div>
+                    </div>
+                    <div onclick="showPage('programs')"
+                        style="background: var(--white); border: 1.5px solid var(--gray-100); border-radius: var(--radius-lg); padding: 24px; text-align: center; cursor: pointer; transition: all 0.2s;"
+                        onmouseover="this.style.borderColor='#c9a84c'" onmouseout="this.style.borderColor='#eceae3'">
+                        <div style="font-size: 36px; margin-bottom: 12px;">💻</div>
+                        <div
+                            style="font-family: var(--font-serif); font-size: 16px; font-weight: 600; color: var(--navy);">
+                            Computing & IT</div>
+                        <div style="font-size: 13px; color: var(--gray-500); margin-top: 4px;">14 programs</div>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <button class="btn-primary" onclick="showPage('programs')">View All Programs →</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =================== PROGRAMS PAGE =================== -->
+    <div id="programs-page" class="page">
+        <div class="programs-hero">
+            <h1>Programs & Courses</h1>
+            <p>Explore 180+ programs across undergraduate, postgraduate, and professional tracks.</p>
+        </div>
+
+        <div class="programs-filters">
+            <div class="filters-inner">
+                <input type="text" class="filter-search" id="prog-search" placeholder="Search programs..."
+                    oninput="filterPrograms()">
+                <select class="filter-select" id="prog-faculty" onchange="filterPrograms()">
+                    <option value="">All Faculties</option>
+                    <option>Medicine & Health Sciences</option>
+                    <option>Engineering</option>
+                    <option>Business & Economics</option>
+                    <option>Law</option>
+                    <option>Computing & IT</option>
+                    <option>Education</option>
+                </select>
+                <select class="filter-select" id="prog-level" onchange="filterPrograms()">
+                    <option value="">All Levels</option>
+                    <option>Undergraduate</option>
+                    <option>Postgraduate</option>
+                    <option>Professional</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="programs-grid" id="programs-grid">
+            <!-- Rendered by JS -->
+        </div>
+    </div>
+
+    <!-- =================== EVENTS PAGE =================== -->
+    <div id="events-page" class="page">
+        <section style="background: var(--navy); padding: 60px 2rem 80px; text-align: center;">
+            <h1 style="font-family: var(--font-serif); font-size: 48px; color: var(--white); margin-bottom: 12px;">
+                Events & Calendar</h1>
+            <p style="color: rgba(255,255,255,0.6); font-size: 17px;">Academic events, open days, public lectures, and
+                campus activities.</p>
+        </section>
+        <section style="background: var(--white);">
+            <div class="container">
+                <div class="events-list" id="events-list">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =================== APPLY PAGE =================== -->
+    <div id="apply-page" class="page">
+        <div class="apply-layout" id="apply-layout">
+            <!-- Sidebar -->
+            <div class="apply-sidebar">
+                <h3>Application Steps</h3>
+                <ul class="steps-list" id="steps-list">
+                    <li class="step-item active" data-step="0" onclick="goToStep(0)">
+                        <div class="step-num">1</div>
+                        <div class="step-label">Personal Details</div>
+                    </li>
+                    <li class="step-item" data-step="1" onclick="goToStep(1)">
+                        <div class="step-num">2</div>
+                        <div class="step-label">Academic Background</div>
+                    </li>
+                    <li class="step-item" data-step="2" onclick="goToStep(2)">
+                        <div class="step-num">3</div>
+                        <div class="step-label">Program Selection</div>
+                    </li>
+                    <li class="step-item" data-step="3" onclick="goToStep(3)">
+                        <div class="step-num">4</div>
+                        <div class="step-label">Documents Upload</div>
+                    </li>
+                    <li class="step-item" data-step="4" onclick="goToStep(4)">
+                        <div class="step-num">5</div>
+                        <div class="step-label">Review & Submit</div>
+                    </li>
+                </ul>
+                <div
+                    style="margin-top: 28px; padding: 16px; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); border-radius: var(--radius-lg);">
+                    <div
+                        style="font-size: 12px; font-weight: 600; color: var(--gold); letter-spacing: 0.5px; margin-bottom: 6px;">
+                        NEED HELP?</div>
+                    <p style="font-size: 13px; color: var(--gray-500); line-height: 1.6;">Contact admissions at<br><a
+                            href="mailto:admissions@Socotra.edu"
+                            style="color: var(--navy); font-weight: 500;">admissions@Socotra.edu</a></p>
+                </div>
+            </div>
+
+            <!-- Form Card -->
+            <div class="apply-form-card" id="apply-form-card">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- =================== RESEARCH PAGE =================== -->
+    <div id="research-page" class="page">
+        <div class="programs-hero">
+            <h1>Research & Innovation</h1>
+            <p>Pioneering solutions to local and global challenges through multidisciplinary research.</p>
+        </div>
+        <section class="container" style="padding-top: 60px;">
+            <div class="section-header">
+                <h2>Our Research Centers</h2>
+                <p>Socotra University is home to world-class research institutes driving impact.</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-card-img"
+                        style="background: linear-gradient(135deg, #1a4a2a 0%, #2d6e42 100%); font-size: 48px;">🌿</div>
+                    <div class="news-card-body">
+                        <h3>Center for Sustainable Agriculture</h3>
+                        <p>Developing climate-resilient crop varieties and sustainable farming practices for arid
+                            regions.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-card-img"
+                        style="background: linear-gradient(135deg, #0d1f3c 0%, #1a3258 100%); font-size: 48px;">💻</div>
+                    <div class="news-card-body">
+                        <h3>Institute of Applied AI</h3>
+                        <p>Harnessing artificial intelligence and machine learning to solve emerging health and logistic
+                            challenges.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-card-img"
+                        style="background: linear-gradient(135deg, #4a2a00 0%, #7a4800 100%); font-size: 48px;">⚖️</div>
+                    <div class="news-card-body">
+                        <h3>Human Rights Observatory</h3>
+                        <p>Documenting, analyzing, and advocating for legal reforms and human rights protection across
+                            the continent.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =================== LIBRARY PAGE =================== -->
+    <div id="library-page" class="page">
+        <div class="programs-hero">
+            <h1>Library</h1>
+            <p>Access millions of resources and dedicated study spaces.</p>
+        </div>
+        <section class="container" style="min-height: 40vh; text-align: center; padding-top: 80px;">
+            <h2 style="font-family: var(--font-serif); color: var(--navy);">Library Resources Integration</h2>
+            <p style="color: var(--gray-500); margin-top: 16px;">The full library catalogue, digital repositories, and
+                reading room bookings will be migrated to exactly this section by library staff.</p>
+        </section>
+    </div>
+
+    <!-- =================== ACADEMIC CALENDAR PAGE =================== -->
+    <div id="calendar-page" class="page">
+        <div class="programs-hero">
+            <h1>Academic Calendar</h1>
+            <p>Key dates and deadlines for the 2025/2026 Academic Year.</p>
+        </div>
+        <section class="container">
+            <h3 style="font-family: var(--font-serif); color: var(--navy); margin-bottom: 16px; font-size: 24px;">Fall
+                Semester 2025</h3>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event / Deadline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>August 25 – 29, 2025</td>
+                        <td>New Student Orientation & Registration</td>
+                    </tr>
+                    <tr>
+                        <td>September 1, 2025</td>
+                        <td>Classes Begin</td>
+                    </tr>
+                    <tr>
+                        <td>October 15 – 17, 2025</td>
+                        <td>Mid-Term Break</td>
+                    </tr>
+                    <tr>
+                        <td>December 5, 2025</td>
+                        <td>Last Day of Classes</td>
+                    </tr>
+                    <tr>
+                        <td>December 8 – 19, 2025</td>
+                        <td>Final Examinations</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3
+                style="font-family: var(--font-serif); color: var(--navy); margin-bottom: 16px; margin-top: 48px; font-size: 24px;">
+                Spring Semester 2026</h3>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event / Deadline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>January 12, 2026</td>
+                        <td>Classes Begin</td>
+                    </tr>
+                    <tr>
+                        <td>March 2 – 6, 2026</td>
+                        <td>Spring Break</td>
+                    </tr>
+                    <tr>
+                        <td>April 24, 2026</td>
+                        <td>Last Day of Classes</td>
+                    </tr>
+                    <tr>
+                        <td>April 27 – May 8, 2026</td>
+                        <td>Final Examinations</td>
+                    </tr>
+                    <tr>
+                        <td>June 20, 2026</td>
+                        <td>Graduation Ceremony</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- =================== ENTRY REQUIREMENTS PAGE =================== -->
+    <div id="requirements-page" class="page">
+        <div class="programs-hero">
+            <h1>Entry Requirements</h1>
+            <p>Find out what you need to join Socotra University programs.</p>
+        </div>
+        <section class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+            <div
+                style="background: var(--white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--gray-100); box-shadow: var(--shadow);">
+                <h3
+                    style="font-family: var(--font-serif); color: var(--navy); font-size: 24px; margin-bottom: 16px; border-bottom: 2px solid var(--gold); padding-bottom: 12px;">
+                    Undergraduate Programs</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 16px; display: flex; gap: 12px;"><span
+                            style="color: var(--gold);">✓</span> KCSE candidates: Mean grade of C+ (Plus) or its
+                        equivalent.</li>
+                    <li style="margin-bottom: 16px; display: flex; gap: 12px;"><span
+                            style="color: var(--gold);">✓</span> IGCSE/A-Level: Minimum of two (2) principal passes and
+                        a subsidiary pass.</li>
+                    <li style="margin-bottom: 16px; display: flex; gap: 12px;"><span
+                            style="color: var(--gold);">✓</span> International Baccalaureate (IB): Minimum of 24 points.
+                    </li>
+                    <li style="display: flex; gap: 12px;"><span style="color: var(--gold);">✓</span> Diploma holders: A
+                        recognized diploma with a minimum of a credit pass.</li>
+                </ul>
+            </div>
+            <div
+                style="background: var(--white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--gray-100); box-shadow: var(--shadow);">
+                <h3
+                    style="font-family: var(--font-serif); color: var(--navy); font-size: 24px; margin-bottom: 16px; border-bottom: 2px solid var(--gold); padding-bottom: 12px;">
+                    Postgraduate Programs</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 16px; display: flex; gap: 12px;"><span
+                            style="color: var(--gold);">✓</span> Master's: A Bachelor’s degree with at least Upper
+                        Second Class Honors.</li>
+                    <li style="margin-bottom: 16px; display: flex; gap: 12px;"><span
+                            style="color: var(--gold);">✓</span> PhD: A recognized Master’s degree in a relevant field
+                        of study.</li>
+                    <li style="margin-bottom: 16px; display: flex; gap: 12px;"><span
+                            style="color: var(--gold);">✓</span> Work Experience: Some professional programs (e.g., MBA)
+                        require 2-3 years of proven work experience.</li>
+                    <li style="display: flex; gap: 12px;"><span style="color: var(--gold);">✓</span> Approved Research
+                        Proposal (for PhD applicants).</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- =================== SCHOLARSHIPS PAGE =================== -->
+    <div id="scholarships-page" class="page">
+        <div class="programs-hero">
+            <h1>Scholarships & Aid</h1>
+            <p>We believe financial constraints should never be a barrier to world-class education.</p>
+        </div>
+        <section class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+            <div
+                style="background: var(--white); padding: 24px; border-radius: var(--radius-lg); border: 1.5px solid var(--gray-100); display: flex; flex-direction: column;">
+                <div
+                    style="background: rgba(201, 168, 76, 0.15); color: #8a6e1f; font-weight: 700; font-size: 11px; padding: 4px 10px; border-radius: 4px; align-self: flex-start; margin-bottom: 12px; letter-spacing: 1px;">
+                    MERIT-BASED</div>
+                <h3
+                    style="font-family: var(--font-serif); color: var(--navy); font-size: 20px; line-height: 1.3; margin-bottom: 8px;">
+                    Vice-Chancellor's Excellence Award</h3>
+                <p style="color: var(--gray-500); font-size: 14px; margin-bottom: 16px; flex: 1;">Awarded to the top 5%
+                    of direct entrants based on national exam performance. Covers 100% of tuition and accommodation
+                    fees.</p>
+                <div style="border-top: 1px solid var(--gray-100); padding-top: 16px; font-size: 13px;">
+                    <strong>Deadline:</strong> July 15, 2025
+                </div>
+            </div>
+            <div
+                style="background: var(--white); padding: 24px; border-radius: var(--radius-lg); border: 1.5px solid var(--gray-100); display: flex; flex-direction: column;">
+                <div
+                    style="background: rgba(26, 102, 64, 0.1); color: var(--success); font-weight: 700; font-size: 11px; padding: 4px 10px; border-radius: 4px; align-self: flex-start; margin-bottom: 12px; letter-spacing: 1px;">
+                    NEED-BASED</div>
+                <h3
+                    style="font-family: var(--font-serif); color: var(--navy); font-size: 20px; line-height: 1.3; margin-bottom: 8px;">
+                    Socotra Opportunity Grant</h3>
+                <p style="color: var(--gray-500); font-size: 14px; margin-bottom: 16px; flex: 1;">Designed for students
+                    from underserved communities. Provides partial to full tuition coverage depending on assessed
+                    financial need.</p>
+                <div style="border-top: 1px solid var(--gray-100); padding-top: 16px; font-size: 13px;">
+                    <strong>Deadline:</strong> August 1, 2025
+                </div>
+            </div>
+            <div
+                style="background: var(--white); padding: 24px; border-radius: var(--radius-lg); border: 1.5px solid var(--gray-100); display: flex; flex-direction: column;">
+                <div
+                    style="background: rgba(13, 31, 60, 0.1); color: var(--navy); font-weight: 700; font-size: 11px; padding: 4px 10px; border-radius: 4px; align-self: flex-start; margin-bottom: 12px; letter-spacing: 1px;">
+                    SPORTS / TALENT</div>
+                <h3
+                    style="font-family: var(--font-serif); color: var(--navy); font-size: 20px; line-height: 1.3; margin-bottom: 8px;">
+                    Elite Athlete Scholarship</h3>
+                <p style="color: var(--gray-500); font-size: 14px; margin-bottom: 16px; flex: 1;">For exceptionally
+                    talented student-athletes representing the university at national or international tournaments.
+                    Includes housing and stipends.</p>
+                <div style="border-top: 1px solid var(--gray-100); padding-top: 16px; font-size: 13px;">
+                    <strong>Deadline:</strong> Rolling Admission
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =================== FEES & FINANCE PAGE =================== -->
+    <div id="finance-page" class="page">
+        <div class="programs-hero">
+            <h1>Fees & Finance</h1>
+            <p>Transparent fee structures and payment plans.</p>
+        </div>
+        <section class="container">
+            <h3 style="font-family: var(--font-serif); color: var(--navy); margin-bottom: 16px; font-size: 24px;">
+                Tuition Fees (per academic year)</h3>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Faculty / Program Area</th>
+                        <th>Domestic Students (KES)</th>
+                        <th>International Students (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Medicine & Health Sciences</td>
+                        <td>320,000</td>
+                        <td>$3,500</td>
+                    </tr>
+                    <tr>
+                        <td>Engineering</td>
+                        <td>185,000</td>
+                        <td>$2,200</td>
+                    </tr>
+                    <tr>
+                        <td>Business & Economics</td>
+                        <td>160,000</td>
+                        <td>$1,800</td>
+                    </tr>
+                    <tr>
+                        <td>Computing & IT</td>
+                        <td>175,000</td>
+                        <td>$2,000</td>
+                    </tr>
+                    <tr>
+                        <td>Law</td>
+                        <td>155,000</td>
+                        <td>$1,750</td>
+                    </tr>
+                    <tr>
+                        <td>Education & Arts</td>
+                        <td>130,000</td>
+                        <td>$1,400</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div
+                style="background: var(--gray-50); padding: 32px; border-radius: var(--radius-lg); margin-top: 40px; border: 1px solid var(--gray-100);">
+                <h4 style="font-family: var(--font-serif); color: var(--navy); font-size: 18px; margin-bottom: 12px;">
+                    Flexible Payment Plans</h4>
+                <p style="color: var(--gray-500); font-size: 15px; margin-bottom: 16px;">We understand the financial
+                    commitment of higher education. Tuition can be paid in full at the start of the year (which attracts
+                    a 5% discount) or in 3 equal installments across the semester.</p>
+                <button class="btn-primary">Download Detailed Fee Policy</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- =================== STUDENT CLUBS PAGE =================== -->
+    <div id="clubs-page" class="page">
+        <div class="programs-hero">
+            <h1>Student Clubs & Societies</h1>
+            <p>Join over 50+ student organizations, from tech hubs to debating societies.</p>
+        </div>
+        <section class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+            <div
+                style="background: var(--white); padding: 32px; text-align: center; border-radius: var(--radius-lg); box-shadow: var(--shadow);">
+                <div style="font-size: 48px; margin-bottom: 20px;">🤖</div>
+                <h3 style="font-family: var(--font-serif); color: var(--navy); font-size: 20px; margin-bottom: 12px;">
+                    Tech & Innovation Hub</h3>
+                <p style="color: var(--gray-500); font-size: 14px;">Focused on robotics, competitive coding, and
+                    open-source contributions. Meets weekly in the engineering lab.</p>
+            </div>
+            <div
+                style="background: var(--white); padding: 32px; text-align: center; border-radius: var(--radius-lg); box-shadow: var(--shadow);">
+                <div style="font-size: 48px; margin-bottom: 20px;">🎤</div>
+                <h3 style="font-family: var(--font-serif); color: var(--navy); font-size: 20px; margin-bottom: 12px;">
+                    Debate Society</h3>
+                <p style="color: var(--gray-500); font-size: 14px;">Award-winning team participating in national and
+                    regional Model UN and debate championships.</p>
+            </div>
+            <div
+                style="background: var(--white); padding: 32px; text-align: center; border-radius: var(--radius-lg); box-shadow: var(--shadow);">
+                <div style="font-size: 48px; margin-bottom: 20px;">🌍</div>
+                <h3 style="font-family: var(--font-serif); color: var(--navy); font-size: 20px; margin-bottom: 12px;">
+                    Environmental Action</h3>
+                <p style="color: var(--gray-500); font-size: 14px;">Leading campus sustainability initiatives, tree
+                    planting, and advocating for green policies globally.</p>
+            </div>
+            <div
+                style="background: var(--white); padding: 32px; text-align: center; border-radius: var(--radius-lg); box-shadow: var(--shadow);">
+                <div style="font-size: 48px; margin-bottom: 20px;">🎨</div>
+                <h3 style="font-family: var(--font-serif); color: var(--navy); font-size: 20px; margin-bottom: 12px;">
+                    Creative Arts Society</h3>
+                <p style="color: var(--gray-500); font-size: 14px;">A vibrant community for musicians, painters, and
+                    actors to collaborate and showcase their talents.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- =================== ACCOMMODATION PAGE =================== -->
+    <div id="accommodation-page" class="page">
+        <div class="programs-hero">
+            <h1>Campus Accommodation</h1>
+            <p>Safe, comfortable, and vibrant living spaces just minutes from your classes.</p>
+        </div>
+        <section class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 32px;">
+            <div
+                style="background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--gray-100); overflow: hidden;">
+                <div
+                    style="height: 200px; background: url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&q=80&w=800') center/cover;">
+                </div>
+                <div style="padding: 32px;">
+                    <h3
+                        style="font-family: var(--font-serif); color: var(--navy); font-size: 24px; margin-bottom: 8px;">
+                        Freshman Hall</h3>
+                    <div style="font-weight: 600; color: var(--gold); margin-bottom: 16px;">KES 85,000 / Semester</div>
+                    <p style="color: var(--gray-500); font-size: 15px; margin-bottom: 20px;">Dedicated exclusively to
+                        first-year students to help establish community. Twin-sharing rooms with communal lounges and
+                        study areas.</p>
+                    <ul
+                        style="list-style: none; padding: 0; color: var(--gray-700); font-size: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <li>🛏️ Furnished Twin Room</li>
+                        <li>📶 High-Speed WiFi</li>
+                        <li>🧹 Weekly Cleaning</li>
+                        <li>🍽️ Cafeteria Adjacent</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--gray-100); overflow: hidden;">
+                <div
+                    style="height: 200px; background: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80&w=800') center/cover;">
+                </div>
+                <div style="padding: 32px;">
+                    <h3
+                        style="font-family: var(--font-serif); color: var(--navy); font-size: 24px; margin-bottom: 8px;">
+                        Postgraduate Apartments</h3>
+                    <div style="font-weight: 600; color: var(--gold); margin-bottom: 16px;">KES 140,000 / Semester</div>
+                    <p style="color: var(--gray-500); font-size: 15px; margin-bottom: 20px;">Premium single ensuite
+                        rooms designed for senior and postgraduate students who require quiet, independent living
+                        spaces.</p>
+                    <ul
+                        style="list-style: none; padding: 0; color: var(--gray-700); font-size: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <li>🚪 Single Ensuite</li>
+                        <li>🍳 Shared Kitchenette</li>
+                        <li>📶 High-Speed WiFi</li>
+                        <li>🛡️ 24/7 Premium Security</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =================== CONTACT US PAGE =================== -->
+    <div id="contact-page" class="page">
+        <div class="programs-hero">
+            <h1>Contact Us</h1>
+            <p>We are here to answer your questions and provide support.</p>
+        </div>
+        <section class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 48px;">
+            <div>
+                <h3 style="font-family: var(--font-serif); color: var(--navy); font-size: 28px; margin-bottom: 16px;">
+                    Get in Touch</h3>
+                <p style="color: var(--gray-500); font-size: 16px; margin-bottom: 32px;">Whether you're a prospective
+                    student, a parent, or an alumnus, we're ready to help. Fill out the form or use our direct
+                    directory.</p>
+                <div style="display: flex; flex-direction: column; gap: 24px;">
+                    <div style="display: flex; gap: 16px; align-items: flex-start;">
+                        <div style="font-size: 24px;">📍</div>
+                        <div><strong style="color: var(--navy); display: block; margin-bottom: 4px;">Main
+                                Campus</strong>Socotra University Ave, Nairobi, Kenya</div>
+                    </div>
+                    <div style="display: flex; gap: 16px; align-items: flex-start;">
+                        <div style="font-size: 24px;">📞</div>
+                        <div><strong style="color: var(--navy); display: block; margin-bottom: 4px;">General
+                                Enquiries</strong>+254 700 123 456<br>info@Socotra.edu</div>
+                    </div>
+                    <div style="display: flex; gap: 16px; align-items: flex-start;">
+                        <div style="font-size: 24px;">✉️</div>
+                        <div><strong style="color: var(--navy); display: block; margin-bottom: 4px;">Admissions
+                                Office</strong>admissions@Socotra.edu</div>
+                    </div>
+                </div>
+            </div>
+            <div
+                style="background: var(--white); padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--gray-100); box-shadow: var(--shadow-lg);">
+                <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <div class="form-row">
+                        <div class="form-group"><label>First Name</label><input type="text" required></div>
+                        <div class="form-group"><label>Last Name</label><input type="text" required></div>
+                    </div>
+                    <div class="form-row full">
+                        <div class="form-group"><label>Email Address</label><input type="email" required></div>
+                    </div>
+                    <div class="form-row full">
+                        <div class="form-group"><label>Message</label><textarea required
+                                style="min-height: 120px;"></textarea></div>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 16px;">Send
+                        Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="#" class="nav-logo" onclick="showPage('home')">
+                    <div class="logo-crest">M</div>
+                    <span>Socotra University</span>
+                </a>
+                <p style="margin-top: 14px;">Committed to academic excellence, research, and service to society since
+                    1892.</p>
+            </div>
+            <div>
+                <h5>Academics</h5>
+                <ul>
+                    <li><a href="#" onclick="showPage('programs')">All Programs</a></li>
+                    <li><a href="#" onclick="showPage('research')">Research</a></li>
+                    <li><a href="#" onclick="showPage('library')">Library</a></li>
+                    <li><a href="#" onclick="showPage('calendar')">Academic Calendar</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Admissions</h5>
+                <ul>
+                    <li><a href="#" onclick="showPage('apply')">Apply Now</a></li>
+                    <li><a href="#" onclick="showPage('requirements')">Entry Requirements</a></li>
+                    <li><a href="#" onclick="showPage('scholarships')">Scholarships</a></li>
+                    <li><a href="#" onclick="showPage('finance')">Fees & Finance</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Campus Life</h5>
+                <ul>
+                    <li><a href="#" onclick="showPage('events')">Events</a></li>
+                    <li><a href="#" onclick="showPage('clubs')">Student Clubs</a></li>
+                    <li><a href="#" onclick="showPage('accommodation')">Accommodation</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Socotra University. All rights reserved.</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
