@@ -76,11 +76,11 @@
         function renderEvents() {
             const list = document.getElementById('events-list');
             list.innerHTML = events.map(e => `
-    <div class="event-item" style="flex-direction: column; align-items: stretch; border: 1px solid var(--gray-100); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 24px; padding: 0;">
-      <div style="width: 100%; height: 220px; overflow: hidden; background: var(--gray-50);">
+    <div class="event-item event-card-container">
+      <div class="event-card-img-wrap">
         <img src="${e.image}" style="width: 100%; height: 100%; object-fit: cover;" alt="Event image" />
       </div>
-      <div style="display: flex; gap: 24px; padding: 24px; background: var(--white);">
+      <div class="event-card-inner">
         <div class="event-date" style="flex-shrink: 0; align-self: flex-start;">
           <div class="month">${e.month}</div>
           <div class="day">${e.day}</div>
