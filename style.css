@@ -779,6 +779,7 @@
         .form-group input,
         .form-group select,
         .form-group textarea {
+            width: 100%;
             border: 1.5px solid var(--gray-200);
             border-radius: var(--radius);
             padding: 10px 14px;
@@ -834,8 +835,9 @@
             background: var(--gray-50);
             border-top: 1px solid var(--gray-100);
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
         }
 
         .progress-bar {
