@@ -1175,3 +1175,25 @@
                 height: 160px;
             }
         }
+
+        /* --- MICRO-ANIMATIONS --- */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Update hover for cards without glows, just a crisp lift and shadow */
+        .news-card, .program-card, .event-item, .hero-stat {
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .news-card:hover, .program-card:hover, .event-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(13, 31, 60, 0.12);
+        }

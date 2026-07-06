@@ -30,6 +30,7 @@ function showPage(page) {
   if (page === 'programs') renderPrograms();
   if (page === 'events') renderEvents();
   if (page === 'apply') { currentStep = 0; renderApplyStep(); }
+  setTimeout(setupAnimations, 100);
   return false;
 }
 
@@ -39,7 +40,7 @@ function renderPrograms(list) {
   const data = list || programs;
   if (!data.length) { grid.innerHTML = '<p style="color:var(--gray-500);text-align:center;padding:40px;grid-column:1/-1;">No programs match your search.</p>'; return; }
   grid.innerHTML = data.map(p => `
-    <div class="program-card">
+    <div class="program-card animate-on-scroll">
       <div class="program-card-header" data-icon="${p.icon}">
         <div class="program-faculty-tag">${p.faculty}</div>
         <h3>${p.name}</h3>
@@ -77,7 +78,7 @@ function filterPrograms() {
 function renderEvents() {
   const list = document.getElementById('events-list');
   list.innerHTML = events.map(e => `
-    <div class="event-item event-card-container">
+    <div class="event-item event-card-container animate-on-scroll">
       <div class="event-card-img-wrap">
         <img src="${e.image}" style="width: 100%; height: 100%; object-fit: cover;" alt="Event image" />
       </div>
@@ -363,3 +364,27 @@ function updatePrograms() {
 // Init
 renderPrograms();
 renderEvents();
+// ===== ANIMATIONS =====
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+function setupAnimations() {
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+}
+
+// Call on load and on page changes
+document.addEventListener('DOMContentLoaded', setupAnimations);
