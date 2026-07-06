@@ -1,9 +1,9 @@
 // ===== DATA =====
 const programs = [
-  { id: 1, name: "Renewable Energy Systems", faculty: "Stream A: Fresh Graduates", level: "Stream A", duration: "4-8 Weeks", fee: "KES 45,000", icon: "☀️", desc: "Solar PV Design & Installation, Grid Integration, Battery Storage Systems, Wind Energy Fundamentals, IEC Compliance & System Commissioning.", req: "Engineering Degree" },
-  { id: 2, name: "Power Utility Technology", faculty: "Stream A: Fresh Graduates", level: "Stream A", duration: "6 Weeks", fee: "KES 55,000", icon: "⚡", desc: "SCADA Systems, Smart Metering, Distribution Protection, Power Quality Analysis, Fault Diagnostics.", req: "Engineering Degree" },
-  { id: 3, name: "Industrial Automation", faculty: "Stream A: Fresh Graduates", level: "Stream A", duration: "6 Weeks", fee: "KES 60,000", icon: "🤖", desc: "PLC Programming, Motor Drives (VFD), Industrial Sensors, Control Logic & Troubleshooting.", req: "Engineering Degree" },
-  { id: 4, name: "Advanced Electrical Installation", faculty: "Stream A: Fresh Graduates", level: "Stream A", duration: "4 Weeks", fee: "KES 40,000", icon: "🏗️", desc: "Industrial Wiring, Control Panel Fabrication, Energy Auditing, IEC Standards Application.", req: "Engineering Degree" },
+  { id: 1, name: "Renewable Energy Systems", faculty: "Stream A: Fresh Graduates", level: "Stream A", duration: "4-8 Weeks", fee: "$350", icon: "☀️", desc: "Solar PV Design & Installation, Grid Integration, Battery Storage Systems, Wind Energy Fundamentals, IEC Compliance & System Commissioning.", req: "Engineering Degree" },
+  { id: 2, name: "Power Utility Technology", faculty: "Stream A: Fresh Graduates", level: "Stream A", duration: "6 Weeks", fee: "$425", icon: "⚡", desc: "SCADA Systems, Smart Metering, Distribution Protection, Power Quality Analysis, Fault Diagnostics.", req: "Engineering Degree" },
+  { id: 3, name: "Industrial Automation", faculty: "Stream A: Fresh Graduates", level: "Stream A", duration: "6 Weeks", fee: "$465", icon: "🤖", desc: "PLC Programming, Motor Drives (VFD), Industrial Sensors, Control Logic & Troubleshooting.", req: "Engineering Degree" },
+  { id: 4, name: "Advanced Electrical Installation", faculty: "Stream A: Fresh Graduates", level: "Stream A", duration: "4 Weeks", fee: "$310", icon: "🏗️", desc: "Industrial Wiring, Control Panel Fabrication, Energy Auditing, IEC Standards Application.", req: "Engineering Degree" },
   { id: 5, name: "Overhead Line Construction & Maintenance", faculty: "Stream B: In-Service Utility Personnel", level: "Stream B", duration: "3-4 Weeks", fee: "Employer Sponsored", icon: "🚧", desc: "Pole climbing safety, Conductor stringing & sagging, Hot-line techniques, Insulator replacement, Transformer installation.", req: "Utility Employee" },
   { id: 6, name: "Substation Equipment O&M", faculty: "Stream B: In-Service Utility Personnel", level: "Stream B", duration: "4 Weeks", fee: "Employer Sponsored", icon: "🔌", desc: "Transformer oil sampling, Buchholz relay testing, Tap changer operation, Circuit breaker servicing (SF6/Vacuum), Switchgear maintenance.", req: "Utility Employee" },
   { id: 7, name: "Power System Protection", faculty: "Stream B: In-Service Utility Personnel", level: "Stream B", duration: "4 Weeks", fee: "Employer Sponsored", icon: "🛡️", desc: "Relay coordination, CT/VT testing, Fault calculations, Protection programming.", req: "Utility Employee" },
@@ -118,7 +118,7 @@ const formSteps = [
           </div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label>Nationality *</label><input type="text" placeholder="e.g. Kenyan" required></div>
+          <div class="form-group"><label>Nationality *</label><input type="text" placeholder="e.g. Somaliland" required></div>
           <div class="form-group"><label>National ID / Passport No. *</label><input type="text" placeholder="ID or Passport number" required></div>
         </div>
       </div>
@@ -126,15 +126,15 @@ const formSteps = [
         <h4>Contact Information</h4>
         <div class="form-row">
           <div class="form-group"><label>Email Address *</label><input type="email" placeholder="your@email.com" required></div>
-          <div class="form-group"><label>Phone Number *</label><input type="tel" placeholder="+254 7XX XXX XXX" required></div>
+          <div class="form-group"><label>Phone Number *</label><input type="tel" placeholder="+252 XX XXX XXXX" required></div>
         </div>
         <div class="form-row full">
           <div class="form-group"><label>Postal Address</label><input type="text" placeholder="P.O. Box or street address"></div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label>County / Region</label><input type="text" placeholder="e.g. Nairobi"></div>
+          <div class="form-group"><label>County / Region</label><input type="text" placeholder="e.g. Marodi Jeh"></div>
           <div class="form-group"><label>Country *</label>
-            <select required><option value="">Select</option><option>Kenya</option><option>Uganda</option><option>Tanzania</option><option>Ethiopia</option><option>Rwanda</option><option>Other</option></select>
+            <select required><option value="">Select</option><option>Somaliland</option><option>Somalia</option><option>Djibouti</option><option>Ethiopia</option><option>Kenya</option><option>Other</option></select>
           </div>
         </div>
       </div>

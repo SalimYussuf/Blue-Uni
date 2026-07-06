@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somaliland Power Technical Training School (PTS)</title>
+    <meta name="description" content="PTS Somaliland provides hands-on, simulation-led technical training in power systems, transmission & distribution, and renewable energy for Somaliland's workforce.">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
         rel="stylesheet">
@@ -13,14 +15,33 @@
 
 <body>
 
+    <!-- Skip to Content (Accessibility) -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Announcement Banner -->
+    <div class="announcement-banner" id="announcement-banner" role="alert">
+        <span>📢 Applications for the 2025/2026 intake close <strong>August 1, 2025</strong> — <a href="#" onclick="showPage('apply'); return false;">Apply Now</a></span>
+        <button class="dismiss-btn" onclick="dismissBanner()" aria-label="Dismiss announcement">×</button>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay" onclick="toggleMobileMenu()"></div>
+
     <!-- NAV -->
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
         <div class="nav-inner">
-            <a href="#" class="nav-logo" onclick="showPage('home')">
+            <a href="#" class="nav-logo" onclick="showPage('home')" aria-label="PTS Somaliland Home">
                 <div class="logo-crest">S</div>
                 <span>PTS Somaliland</span>
             </a>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+                <div class="hamburger-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#" onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
                 <li><a href="#" onclick="showPage('programs')" id="nav-programs">Programs</a></li>
                 <li><a href="#" onclick="showPage('events')" id="nav-events">Events</a></li>
@@ -32,7 +53,7 @@
     <!-- =================== HOME PAGE =================== -->
     <div id="home-page" class="page active">
         <!-- Hero -->
-        <div class="hero" style="background: linear-gradient(rgba(33, 77, 94, 0.85), rgba(33, 77, 94, 0.95)), url('hero.png') center/cover;">
+        <div class="hero" id="main-content" role="main" style="background: linear-gradient(rgba(33, 77, 94, 0.85), rgba(33, 77, 94, 0.95)), url('hero.png') center/cover;">
             <div class="hero-badge">Est. 2024 · Excellence in Technical Training</div>
             <h1>Power Systems Transmission & Distribution<br><em>&</em> Utility Workforce Development</h1>
             <p>PTS provides hands-on, simulation-led instruction to produce industry-ready professionals for Somaliland’s power sector.</p>
@@ -164,6 +185,116 @@
                 </div>
                 <div style="text-align: center;">
                     <button class="btn-primary" onclick="showPage('programs')">View All Programs →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <div class="section-label" style="color: var(--gold-light);">Success Stories</div>
+                    <h2 style="color: var(--white);">What Our Graduates Say</h2>
+                    <p style="color: rgba(255,255,255,0.55);">Hear from trainees who transformed their careers through PTS.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-quote">The hands-on approach at PTS gave me skills I could not learn from textbooks alone. Within two months of graduating, I was leading a substation commissioning team at Sompower.</div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AM</div>
+                            <div>
+                                <div class="testimonial-name">Abdirahman Mohamed</div>
+                                <div class="testimonial-role">Stream A Graduate, 2024 · Substation Engineer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-quote">As an in-service linesman for 8 years, the CPD module on hot-line techniques transformed my understanding of safety. I now train my own crew using PTS methods.</div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">FH</div>
+                            <div>
+                                <div class="testimonial-name">Fadumo Hassan</div>
+                                <div class="testimonial-role">Stream B, CPD · Senior Line Technician</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-quote">The renewable energy module opened doors I never imagined. I designed and installed a 50kW solar microgrid for a rural clinic — a direct result of my PTS training.</div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">YA</div>
+                            <div>
+                                <div class="testimonial-name">Yasmin Abdi</div>
+                                <div class="testimonial-role">Stream A Graduate, 2024 · Solar PV Engineer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Accordion -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <div class="section-label">Common Questions</div>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know about admissions, fees, and campus life.</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>What are the entry requirements for Stream A?</span>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Stream A is designed for fresh graduates. You need a recognized Bachelor's Degree in Electrical Engineering or a related field, foundational understanding of power systems theory, commitment to safety protocols, and a clear background check with medical fitness for high-voltage environments.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>How long are the training programs?</span>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Program durations vary by module. Stream A modules range from 4 to 8 weeks, while Stream B CPD modules for in-service personnel typically run 3 to 4 weeks. The mandatory HV Safety module is a 1-week intensive for all participants.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>What are the tuition fees and is financial aid available?</span>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tuition varies by module, ranging from $310 to $465 for Stream A. Stream B modules are typically employer-sponsored. We offer merit-based bursaries, the Sompower Capacity Grant for underserved regions, and a Women in Power Engineering Scholarship. Fees can be paid in full (5% discount) or in 3 installments.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Is housing available for trainees from other regions?</span>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We offer Technician Lodging at $650/semester (twin-sharing with WiFi, cleaning, and cafeteria access) and Engineer Suites at $1,100/semester (single ensuite rooms with kitchenette and premium security). Both options are located on or near campus in Hargeisa.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>What certification do graduates receive?</span>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Graduates receive internationally aligned, competency-based certificates that indicate module competency level, contact hours completed, practical proficiency rating, and safety compliance status. Our certifications are IEC-compliant and recognized by utility employers across the region.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Can I apply if I'm currently employed at a utility?</span>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely. Stream B is specifically designed for in-service utility personnel — linesmen, technicians, and engineers. You'll need endorsement/sponsorship from your employer, prior basic electrical safety training, and a valid utility ID with signed waiver.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -525,11 +656,7 @@
                         <td>$500</td>
                         <td>$700</td>
                     </tr>
-                    <tr>
-                        <td>Education & Arts</td>
-                        <td>130,000</td>
-                        <td>$1,400</td>
-                    </tr>
+
                 </tbody>
             </table>
 
@@ -603,7 +730,7 @@
                     <h3
                         style="font-family: var(--font-serif); color: var(--navy); font-size: 24px; margin-bottom: 8px;">
                         Technician Lodging</h3>
-                    <div style="font-weight: 600; color: var(--gold); margin-bottom: 16px;">KES 85,000 / Semester</div>
+                    <div style="font-weight: 600; color: var(--gold); margin-bottom: 16px;">$650 / Semester</div>
                     <p style="color: var(--gray-500); font-size: 15px; margin-bottom: 20px;">Dedicated exclusively to
                         first-year students to help establish community. Twin-sharing rooms with communal lounges and
                         study areas.</p>
@@ -625,7 +752,7 @@
                     <h3
                         style="font-family: var(--font-serif); color: var(--navy); font-size: 24px; margin-bottom: 8px;">
                         Engineer Suites</h3>
-                    <div style="font-weight: 600; color: var(--gold); margin-bottom: 16px;">KES 140,000 / Semester</div>
+                    <div style="font-weight: 600; color: var(--gold); margin-bottom: 16px;">$1,100 / Semester</div>
                     <p style="color: var(--gray-500); font-size: 15px; margin-bottom: 20px;">Premium single ensuite
                         rooms designed for senior and postgraduate students who require quiet, independent living
                         spaces.</p>
@@ -658,12 +785,12 @@
                     <div style="display: flex; gap: 16px; align-items: flex-start;">
                         <div style="font-size: 24px;">📍</div>
                         <div><strong style="color: var(--navy); display: block; margin-bottom: 4px;">Main
-                                Campus</strong>Power Training School Ave, Nairobi, Kenya</div>
+                                Campus</strong>Power Training School Ave, Hargeisa, Somaliland</div>
                     </div>
                     <div style="display: flex; gap: 16px; align-items: flex-start;">
                         <div style="font-size: 24px;">📞</div>
                         <div><strong style="color: var(--navy); display: block; margin-bottom: 4px;">General
-                                Enquiries</strong>+254 700 123 456<br>info@Socotra.edu</div>
+                                Enquiries</strong>+252 63 XXX XXXX<br>info@pts.somaliland</div>
                     </div>
                     <div style="display: flex; gap: 16px; align-items: flex-start;">
                         <div style="font-size: 24px;">✉️</div>
@@ -693,16 +820,18 @@
         </section>
     </div>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" onclick="scrollToTop()" aria-label="Scroll back to top">↑</button>
+
     <!-- FOOTER -->
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-inner">
             <div class="footer-brand">
                 <a href="#" class="nav-logo" onclick="showPage('home')">
                     <div class="logo-crest">S</div>
                     <span>PTS Somaliland</span>
                 </a>
-                <p style="margin-top: 14px;">Committed to academic excellence, research, and service to society since
-                    1892.</p>
+                <p style="margin-top: 14px;">Committed to technical excellence and workforce development for Somaliland's power sector since 2024.</p>
             </div>
             <div>
                 <h5>Academics</h5>
