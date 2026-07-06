@@ -1,21 +1,22 @@
 // ===== DATA =====
 const programs = [
-  { id: 1, name: "Bachelor of Medicine & Surgery (MBChB)", faculty: "Medicine & Health Sciences", level: "Undergraduate", duration: "6 years", fee: "KES 320,000/yr", icon: "⚕️", desc: "Comprehensive medical training combining clinical practice and scientific foundations. Fully accredited by the Medical Practitioners Board.", req: "A-level Biology & Chemistry, minimum B grade" },
-  { id: 2, name: "BSc Civil Engineering", faculty: "Engineering", level: "Undergraduate", duration: "4 years", fee: "KES 185,000/yr", icon: "🏗️", desc: "Covers structural, geotechnical, water and transport engineering with state-of-the-art labs and industry attachments.", req: "A-level Maths & Physics, minimum C+ grade" },
-  { id: 3, name: "MBA – Business Administration", faculty: "Business & Economics", level: "Postgraduate", duration: "2 years", fee: "KES 210,000/yr", icon: "💼", desc: "A rigorous management program for mid-career professionals, with specialisations in Finance, Strategy, and Entrepreneurship.", req: "Bachelor's degree, 3 years work experience" },
-  { id: 4, name: "LLB – Bachelor of Laws", faculty: "Law", level: "Undergraduate", duration: "4 years", fee: "KES 155,000/yr", icon: "⚖️", desc: "A comprehensive legal education covering public, private and international law, with moot court training and legal aid clinic.", req: "A-level any 2 subjects, minimum C grade" },
-  { id: 5, name: "BSc Computer Science", faculty: "Computing & IT", level: "Undergraduate", duration: "4 years", fee: "KES 175,000/yr", icon: "💻", desc: "Covers algorithms, AI/ML, software engineering and cybersecurity. Includes industry internship in year 3.", req: "A-level Maths, minimum C grade" },
-  { id: 6, name: "MSc Data Science & AI", faculty: "Computing & IT", level: "Postgraduate", duration: "18 months", fee: "KES 240,000/yr", icon: "🤖", desc: "Cutting-edge program covering machine learning, big data, and applied AI. Features research labs with GPU clusters.", req: "BSc in a quantitative field, minimum Upper Second" },
-  { id: 7, name: "BEd – Bachelor of Education (Science)", faculty: "Education", level: "Undergraduate", duration: "4 years", fee: "KES 130,000/yr", icon: "📚", desc: "Prepares qualified science teachers for secondary and tertiary institutions, with teaching practice in partner schools.", req: "A-level Science subjects, minimum C grade" },
-  { id: 8, name: "BSc Nursing", faculty: "Medicine & Health Sciences", level: "Undergraduate", duration: "4 years", fee: "KES 160,000/yr", icon: "🏥", desc: "Combines clinical nursing skills with community health, midwifery, and healthcare management modules.", req: "A-level Biology & any Science, minimum C grade" },
+  { id: 1, name: "Renewable Energy Systems", faculty: "Stream A: Fresh Graduates", level: "Stream A", duration: "4-8 Weeks", fee: "KES 45,000", icon: "☀️", desc: "Solar PV Design & Installation, Grid Integration, Battery Storage Systems, Wind Energy Fundamentals, IEC Compliance & System Commissioning.", req: "Engineering Degree" },
+  { id: 2, name: "Power Utility Technology", faculty: "Stream A: Fresh Graduates", level: "Stream A", duration: "6 Weeks", fee: "KES 55,000", icon: "⚡", desc: "SCADA Systems, Smart Metering, Distribution Protection, Power Quality Analysis, Fault Diagnostics.", req: "Engineering Degree" },
+  { id: 3, name: "Industrial Automation", faculty: "Stream A: Fresh Graduates", level: "Stream A", duration: "6 Weeks", fee: "KES 60,000", icon: "🤖", desc: "PLC Programming, Motor Drives (VFD), Industrial Sensors, Control Logic & Troubleshooting.", req: "Engineering Degree" },
+  { id: 4, name: "Advanced Electrical Installation", faculty: "Stream A: Fresh Graduates", level: "Stream A", duration: "4 Weeks", fee: "KES 40,000", icon: "🏗️", desc: "Industrial Wiring, Control Panel Fabrication, Energy Auditing, IEC Standards Application.", req: "Engineering Degree" },
+  { id: 5, name: "Overhead Line Construction & Maintenance", faculty: "Stream B: In-Service Utility Personnel", level: "Stream B", duration: "3-4 Weeks", fee: "Employer Sponsored", icon: "🚧", desc: "Pole climbing safety, Conductor stringing & sagging, Hot-line techniques, Insulator replacement, Transformer installation.", req: "Utility Employee" },
+  { id: 6, name: "Substation Equipment O&M", faculty: "Stream B: In-Service Utility Personnel", level: "Stream B", duration: "4 Weeks", fee: "Employer Sponsored", icon: "🔌", desc: "Transformer oil sampling, Buchholz relay testing, Tap changer operation, Circuit breaker servicing (SF6/Vacuum), Switchgear maintenance.", req: "Utility Employee" },
+  { id: 7, name: "Power System Protection", faculty: "Stream B: In-Service Utility Personnel", level: "Stream B", duration: "4 Weeks", fee: "Employer Sponsored", icon: "🛡️", desc: "Relay coordination, CT/VT testing, Fault calculations, Protection programming.", req: "Utility Employee" },
+  { id: 8, name: "Generation Plant O&M", faculty: "Stream B: In-Service Utility Personnel", level: "Stream B", duration: "4 Weeks", fee: "Employer Sponsored", icon: "🏭", desc: "Diesel & gas turbine maintenance, Synchronization techniques, AVR systems, Auxiliary systems management.", req: "Utility Employee" },
+  { id: 9, name: "High Voltage Safety & Regulations", faculty: "Mandatory Core", level: "All Levels", duration: "1 Week", fee: "Included", icon: "⚠️", desc: "Mandatory for all participants. Permit-to-work systems, Isolation & earthing procedures, PPE standards, Emergency response & rescue.", req: "None" }
 ];
 
 const events = [
-  { image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=600", month: "APR", day: "5", title: "Open Day – All Faculties", location: "Main Campus, Nairobi", time: "9:00 AM – 4:00 PM", tags: ["Open Day", "All Faculties"], desc: "Tour facilities, meet faculty, and talk to current students. Register for a guided tour." },
-  { image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=600", month: "APR", day: "18", title: "Public Lecture: The Future of AI in Africa", location: "Chancellor's Auditorium", time: "2:00 PM", tags: ["Public Lecture", "Computing"], desc: "Prof. Amara Diallo (MIT) delivers the 2025 Meridian Lecture on artificial intelligence and development." },
-  { image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=600", month: "MAY", day: "2", title: "Postgraduate Research Symposium", location: "Nairobi Campus", time: "8:30 AM – 5:00 PM", tags: ["Research", "Postgraduate"], desc: "Annual showcase of ongoing doctoral and master's research across all disciplines." },
-  { image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=600", month: "MAY", day: "14", title: "Application Deadline Reminder Workshop", location: "Online (Zoom)", time: "10:00 AM", tags: ["Admissions", "Online"], desc: "Our admissions team walks prospective applicants through the online application process step by step." },
-  { image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=600", month: "JUN", day: "20", title: "Graduation Ceremony – Class of 2025", location: "Kasarani Arena, Nairobi", time: "10:00 AM", tags: ["Graduation", "Ceremony"], desc: "The annual graduation ceremony celebrating the Class of 2025. Family attendance welcome." },
+  { image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=600", month: "SEP", day: "10", title: "HV Safety Induction Training", location: "Main Workshop", time: "9:00 AM – 4:00 PM", tags: ["Safety", "Mandatory"], desc: "Comprehensive high-voltage onboarding and zero-tolerance safety briefing for the incoming cohort." },
+  { image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=600", month: "OCT", day: "15", title: "Industry Guest Lecture: Smart Grids", location: "Classroom 1", time: "2:00 PM", tags: ["Guest Lecture", "Smart Grid"], desc: "Senior engineers from partner utility Sompower discussing the future of smart metering in Somaliland." },
+  { image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=600", month: "NOV", day: "5", title: "Microgrid Commissioning Workshop", location: "Renewable Energy Microgrid Lab", time: "8:30 AM – 5:00 PM", tags: ["Practical", "Solar PV"], desc: "Hands-on integration testing and fault analysis in the dedicated solar PV and battery storage lab." },
+  { image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=600", month: "DEC", day: "1", title: "CPD Registration Deadline", location: "Online Portal", time: "5:00 PM", tags: ["Admissions", "CPD"], desc: "Last day for utility personnel to register for the upcoming Stream B professional development modules." },
+  { image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=600", month: "DEC", day: "20", title: "Certification Ceremony", location: "PTS Auditorium", time: "10:00 AM", tags: ["Certification", "Ceremony"], desc: "Awarding internationally aligned, competency-based certificates to our latest industry-ready graduates." }
 ];
 
 // ===== NAVIGATION =====
@@ -139,35 +140,30 @@ const formSteps = [
     `
   },
   {
-    title: "Academic Background",
-    subtitle: "Your educational history",
+    title: "Background & Experience",
+    subtitle: "Your technical history",
     html: `
       <div class="form-section">
-        <h4>Secondary Education</h4>
+        <h4>Technical Education</h4>
         <div class="form-row">
-          <div class="form-group"><label>School Name *</label><input type="text" placeholder="Name of secondary school" required></div>
-          <div class="form-group"><label>Year of Completion *</label><input type="number" placeholder="e.g. 2022" min="1990" max="2025" required></div>
+          <div class="form-group"><label>University / Institution *</label><input type="text" placeholder="Name of institution" required></div>
+          <div class="form-group"><label>Year of Graduation *</label><input type="number" placeholder="e.g. 2024" required></div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label>Qualification *</label>
-            <select required><option value="">Select qualification</option><option>KCSE</option><option>A-Levels (Cambridge)</option><option>International Baccalaureate</option><option>IGCSE</option><option>Other</option></select>
+          <div class="form-group"><label>Degree / Qualification *</label>
+            <select required><option value="">Select qualification</option><option>BSc Electrical Engineering</option><option>BSc Mechatronics</option><option>Higher National Diploma</option><option>Other</option></select>
           </div>
-          <div class="form-group"><label>Overall Grade / Score *</label><input type="text" placeholder="e.g. A (81 points) or A B B C C" required></div>
-        </div>
-        <div class="form-row full">
-          <div class="form-group"><label>Best Subjects & Grades (3 relevant subjects)</label>
-            <textarea placeholder="e.g.&#10;Mathematics – A&#10;Biology – A&#10;Chemistry – B"></textarea>
-          </div>
+          <div class="form-group"><label>Overall Grade / Classification *</label><input type="text" placeholder="e.g. First Class, Upper Second" required></div>
         </div>
       </div>
       <div class="form-section">
-        <h4>Previous Tertiary Education (if any)</h4>
+        <h4>Current Employment (If applicable)</h4>
         <div class="form-row">
-          <div class="form-group"><label>Institution Name</label><input type="text" placeholder="University or college (optional)"></div>
-          <div class="form-group"><label>Qualification Obtained</label><input type="text" placeholder="e.g. Diploma in Business Studies"></div>
+          <div class="form-group"><label>Current Employer</label><input type="text" placeholder="e.g. Sompower, Telesom"></div>
+          <div class="form-group"><label>Job Title</label><input type="text" placeholder="e.g. Linesman, Junior Engineer"></div>
         </div>
         <div class="form-row full">
-          <div class="form-group"><label>Year & Final Result</label><input type="text" placeholder="e.g. 2024 – Upper Second Class"></div>
+          <div class="form-group"><label>Years of Experience</label><input type="number" placeholder="e.g. 3"></div>
         </div>
       </div>
     `
@@ -179,43 +175,32 @@ const formSteps = [
       <div class="form-section">
         <h4>Program Choice</h4>
         <div class="form-row full">
-          <div class="form-group"><label>Faculty *</label>
+          <div class="form-group"><label>Stream *</label>
             <select id="sel-faculty" onchange="updatePrograms()" required>
-              <option value="">-- Select a Faculty --</option>
-              <option>Medicine & Health Sciences</option>
-              <option>Engineering</option>
-              <option>Business & Economics</option>
-              <option>Law</option>
-              <option>Computing & IT</option>
-              <option>Education</option>
+              <option value="">-- Select a Stream --</option>
+              <option>Stream A: Fresh Graduates</option>
+              <option>Stream B: In-Service Utility Personnel</option>
+              <option>Mandatory Core</option>
             </select>
           </div>
         </div>
         <div class="form-row full">
-          <div class="form-group"><label>First Choice Program *</label>
-            <select id="sel-program" required><option value="">-- Select Faculty first --</option></select>
+          <div class="form-group"><label>Module / Program *</label>
+            <select id="sel-program" required><option value="">-- Select Stream first --</option></select>
           </div>
         </div>
         <div class="form-row full">
-          <div class="form-group"><label>Second Choice Program (optional)</label>
-            <select><option value="">-- Optional alternative program --</option></select>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group"><label>Intake *</label>
-            <select required><option value="">Select intake</option><option>September 2025</option><option>January 2026</option></select>
-          </div>
-          <div class="form-group"><label>Study Mode *</label>
-            <select required><option value="">Select mode</option><option>Full-time</option><option>Part-time</option><option>Distance Learning</option></select>
+          <div class="form-group"><label>Sponsorship Status</label>
+            <select><option value="">Self-Sponsored</option><option value="">Employer-Sponsored</option></select>
           </div>
         </div>
       </div>
       <div class="form-section">
-        <h4>Personal Statement</h4>
+        <h4>Statement of Purpose</h4>
         <div class="form-row full">
           <div class="form-group">
-            <label>Why do you want to study this program? (min. 150 words) *</label>
-            <textarea style="min-height:140px;" placeholder="Describe your motivation, relevant experience, and future goals..." required></textarea>
+            <label>Why do you want to undertake this technical training? *</label>
+            <textarea style="min-height:140px;" placeholder="Describe your motivation, relevant experience, and career goals in the power sector..." required></textarea>
           </div>
         </div>
       </div>
