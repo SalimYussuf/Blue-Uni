@@ -13,7 +13,7 @@ const programs = [
 
 const events = [
   { image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=600", month: "SEP", day: "10", title: "HV Safety Induction Training", location: "Main Workshop", time: "9:00 AM – 4:00 PM", tags: ["Safety", "Mandatory"], desc: "Comprehensive high-voltage onboarding and zero-tolerance safety briefing for the incoming cohort." },
-  { image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=600", month: "OCT", day: "15", title: "Industry Guest Lecture: Smart Grids", location: "Classroom 1", time: "2:00 PM", tags: ["Guest Lecture", "Smart Grid"], desc: "Senior engineers from partner utility Sompower discussing the future of smart metering in Somaliland." },
+  { image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=600", month: "OCT", day: "15", title: "Industry Guest Lecture: Smart Grids", location: "Classroom 1", time: "2:00 PM", tags: ["Guest Lecture", "Smart Grid"], desc: "Senior engineers from partner utility Sompower discussing the future of smart metering in Kenya." },
   { image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=600", month: "NOV", day: "5", title: "Microgrid Commissioning Workshop", location: "Renewable Energy Microgrid Lab", time: "8:30 AM – 5:00 PM", tags: ["Practical", "Solar PV"], desc: "Hands-on integration testing and fault analysis in the dedicated solar PV and battery storage lab." },
   { image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=600", month: "DEC", day: "1", title: "CPD Registration Deadline", location: "Online Portal", time: "5:00 PM", tags: ["Admissions", "CPD"], desc: "Last day for utility personnel to register for the upcoming Stream B professional development modules." },
   { image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=600", month: "DEC", day: "20", title: "Certification Ceremony", location: "PTS Auditorium", time: "10:00 AM", tags: ["Certification", "Ceremony"], desc: "Awarding internationally aligned, competency-based certificates to our latest industry-ready graduates." }
@@ -118,7 +118,7 @@ const formSteps = [
           </div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label>Nationality *</label><input type="text" placeholder="e.g. Somaliland" required></div>
+          <div class="form-group"><label>Nationality *</label><input type="text" placeholder="e.g. Kenya" required></div>
           <div class="form-group"><label>National ID / Passport No. *</label><input type="text" placeholder="ID or Passport number" required></div>
         </div>
       </div>
@@ -134,7 +134,7 @@ const formSteps = [
         <div class="form-row">
           <div class="form-group"><label>County / Region</label><input type="text" placeholder="e.g. Marodi Jeh"></div>
           <div class="form-group"><label>Country *</label>
-            <select required><option value="">Select</option><option>Somaliland</option><option>Somalia</option><option>Djibouti</option><option>Ethiopia</option><option>Kenya</option><option>Other</option></select>
+            <select required><option value="">Select</option><option>Kenya</option><option>Somalia</option><option>Djibouti</option><option>Ethiopia</option><option>Kenya</option><option>Other</option></select>
           </div>
         </div>
       </div>
